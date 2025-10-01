@@ -28,7 +28,7 @@ required_restarts(){
 deploy(){
   docker build -t notes-app .
   docker run -d -p 8000:8000 notes-app:latest python3 manage.py runserver 0.0.0.0:8000
-}
+} 
 
 echo "**********DEployment Started*******"
 if ! code_clone; then
